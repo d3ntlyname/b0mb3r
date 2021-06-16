@@ -28,11 +28,7 @@ logo='''
   / ___/ __ `__ \/ ___/  / //_/ / / / _ \/ ___/    
  (__  ) / / / / (__  )  / ,< / / / /  __/ /        
 /____/_/ /_/ /_/____/  /_/|_/_/_/_/\___/_/         
-     ,--.!,
-  __/   -*-
-,d08b.  '|`
-0088MM
-`9MMP'   hjm
+     by t.me/dently
 '''
 #-------------------------------------------
 
@@ -579,13 +575,8 @@ system("cls" if name == "nt" else "clear")
 while True:
     RESET = '\033[0m'
     print(Fore.MAGENTA+logo)
-    print(Fore.WHITE+'[' + Fore.GREEN + '1' + Fore.WHITE + '] - смс бомбер')
-    print(Fore.WHITE+'[' + Fore.GREEN + '2' + Fore.WHITE + '] - gmail бомбер')
-    print(Fore.WHITE+'[' + Fore.GREEN + '3' + Fore.WHITE + '] - telegram бомбер')
-    print(Fore.WHITE+'[' + Fore.GREEN + '4' + Fore.WHITE + '] - узнать информацию о номере')
-    print(Fore.WHITE+'[' + Fore.GREEN + '5' + Fore.WHITE + '] - запустить своего спам бота')
-    print(Fore.WHITE + '[' + Fore.GREEN + '6' + Fore.WHITE + '] - поддержка')
-    print(Fore.WHITE + '[' + Fore.GREEN + '7' + Fore.WHITE + '] - купить подписку')
+    print(Fore.WHITE+'[' + Fore.GREEN + '1' + Fore.WHITE + '] - Смс бомбер')
+    print(Fore.WHITE+'[' + Fore.GREEN + '2' + Fore.WHITE + '] - Gmail бомбер')
     try:
         menua=int(input(Fore.RED+'sms_killer'+Fore.WHITE+'>> '))
     except:
@@ -594,21 +585,21 @@ while True:
     if menua == 5:
         print('Введите токен с FatherBot')
         try:
-            int(input(Fore.RED + 'sms_killer/token' + Fore.WHITE + '>> '))
+            int(input(Fore.RED + 'sms_killer/token' + Fore.WHITE + ': '))
         except:
             pass
         print(Fore.LIGHTGREEN_EX+'В разработке...')
     elif menua == 7:
-        print(Fore.WHITE+'‼️Получение подписки\nДля пользователей киви:\n1) https://qiwi.com/p/79165885068 - переходим по ссылке\n2)Узнаем свой id\n4)В комментарий к платежу вписываем id\n3)Совершаем перевод на сумму 150 руб')
+        print(Fore.WHITE+'‼️Получение подписки\nДля пользователей киви:\n1) https://qiwi.com/n/DENTLY - переходим по ссылке\n2)Узнаем свой id\n4)В комментарий к платежу вписываем id\n3)Совершаем перевод на сумму 150 руб')
         ghj = input(Fore.WHITE + '[' + Fore.GREEN + '1' + Fore.WHITE + '] - написать админу\n'+Fore.WHITE + '[' + Fore.GREEN + '2' + Fore.WHITE + '] - выйти\n'+Fore.RED + 'sms_killer/money' + Fore.WHITE + '>> ')
         if ghj == '1':
             print(Fore.GREEN+'Открываю админа')
-            system('termux-open-url https://t.me/botnet_master')
+            system('termux-open-url https://t.me/dently')
     elif menua == 6:
         print('Перейти в чат поддержки?')
-        joi = input(Fore.WHITE + '[' + Fore.GREEN + '1' + Fore.WHITE + '] - да\n'+Fore.WHITE + '[' + Fore.GREEN + '2' + Fore.WHITE + '] - нет\n'+Fore.RED + 'sms_killer/help' + Fore.WHITE + '>> ')
+        joi = input(Fore.WHITE + '[' + Fore.GREEN + '1' + Fore.WHITE + '] - да\n'+Fore.WHITE + '[' + Fore.GREEN + '2' + Fore.WHITE + '] - нет\n'+Fore.RED + 'sms_killer/help' + Fore.WHITE + ': ')
         if joi == '1':
-            system('termux-open-url https://t.me/sms_killer_chat')
+            system('termux-open-url https://t.me/dently')
         else:
             pass
     elif menua == 4:
@@ -617,7 +608,7 @@ while True:
         sleep(5)
     elif menua == 1:
         print('Введите номер телефона на который необходимо произвести атаку')
-        phone = input(Fore.RED + 'sms_killer/phone' + Fore.WHITE + '>> ')
+        phone = input(Fore.RED + 'sms_killer/phone' + Fore.WHITE + ': ')
         lol = 0
         print('Атака началась для остановки: Ctrl + Z')
         while True:
@@ -633,12 +624,12 @@ while True:
             print(ea)
         print(Fore.LIGHTGREEN_EX+'Атака началась')
     elif menua == 3:
-        print(Fore.RED+'К сожалению спам телеграма доступен только при подписке на наш бомбер \n(цена 149 руб) если хотите приобрести пишите @botnet_master')
+        print(Fore.RED+'К сожалению спам телеграма доступен только при подписке на наш бомбер \n(цена 149 руб) если хотите приобрести пишите @dently')
         print(Fore.WHITE+'[1] - перейти к покупке\n[2] - выйти')
         ag =int(input(Fore.RED+'sms_killer/vip'+Fore.WHITE+'>> '))
         if ag == 1:
             try:
-                system('termux-open-url t.me/botnet_master')
+                system('termux-open-url t.me/dently')
             except:
                 pass
         else:
