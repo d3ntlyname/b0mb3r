@@ -6,7 +6,7 @@ except:
     system('pip3 install colorama')
 from new_botnet import spam_gmail
 from colorama import init, Fore, Back, Style
-print(Fore.LIGHTGREEN_EX+'Проверка зависимостей.')
+print(Fore.LIGHTGREEN_EX+'Проверка зависимостей...')
 try:
     import requests
 except:
@@ -28,7 +28,7 @@ logo='''
   / ___/ __ `__ \/ ___/  / //_/ / / / _ \/ ___/    
  (__  ) / / / / (__  )  / ,< / / / /  __/ /        
 /____/_/ /_/ /_/____/  /_/|_/_/_/_/\___/_/         
-     by t.me/dently
+       by t.me/dently
 '''
 #-------------------------------------------
 
@@ -569,16 +569,16 @@ def spam(phone):
     start(phone)
 
 print(Fore.MAGENTA+logo)
-print('       Для приобретения платной версия включающей\n       звонки и спам телеграма сообщениями\n       со своим текстом,писать в телеграм\n       @botnet_master')
-time.sleep(5)
+print('Добро пожаловать!')
+time.sleep(1)
 system("cls" if name == "nt" else "clear")
 while True:
     RESET = '\033[0m'
     print(Fore.MAGENTA+logo)
-    print(Fore.WHITE+'[' + Fore.GREEN + '1' + Fore.WHITE + '] - Смс бомбер')
-    print(Fore.WHITE+'[' + Fore.GREEN + '2' + Fore.WHITE + '] - Gmail бомбер')
+    print(Fore.WHITE+'[' + Fore.GREEN + '1' + Fore.WHITE + '] -> Смс бомбер')
+    print(Fore.WHITE+'[' + Fore.GREEN + '2' + Fore.WHITE + '] -> Gmail бомбер')
     try:
-        menua=int(input(Fore.RED+'sms_killer'+Fore.WHITE+'>> '))
+        menua=int(input(Fore.RED+'sms_killer'+Fore.WHITE+': '))
     except:
         menua=None
         system("cls" if name == "nt" else "clear")
@@ -603,7 +603,7 @@ while True:
         else:
             pass
     elif menua == 4:
-        phone = input(Fore.RED+'Введите номер'+Fore.WHITE+'>> ')
+        phone = input(Fore.RED+'Введите номер'+Fore.WHITE+': ')
         num(phone)
         sleep(5)
     elif menua == 1:
@@ -626,7 +626,7 @@ while True:
     elif menua == 3:
         print(Fore.RED+'К сожалению спам телеграма доступен только при подписке на наш бомбер \n(цена 149 руб) если хотите приобрести пишите @dently')
         print(Fore.WHITE+'[1] - перейти к покупке\n[2] - выйти')
-        ag =int(input(Fore.RED+'sms_killer/vip'+Fore.WHITE+'>> '))
+        ag =int(input(Fore.RED+'sms_killer/vip'+Fore.WHITE+': '))
         if ag == 1:
             try:
                 system('termux-open-url t.me/dently')
