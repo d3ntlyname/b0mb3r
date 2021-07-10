@@ -15,7 +15,6 @@ if config == False:
  req = ['pyrogram', 'tgcrypto', 'asyncio']
  for _ in req:
   os.system(f'pip3 install {_}')
-  print(colorama.Fore.GREEN)
 from pyrogram import Client, filters, idle; import asyncio, requests; from datetime import datetime
 
 # Конфиг
