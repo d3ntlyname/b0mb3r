@@ -1,6 +1,6 @@
 import os, sys, time, random
 os.system('clear'); os.system('pip3 install colorama'); os.system('clear')
-import colorama
+import colorama; from os import system as terminal
 dethree = """╭━━━╮╱╱╭╮╭╮╱╱╱╱╱╱╱╱╱╱╱╭━━━━╮╱╭╮
 ╰╮╭╮┃╱╭╯╰┫┃╱╱╱╱╱╱╱╱╱╱╱┃╭╮╭╮┃╱┃┃
 ╱┃┃┃┣━┻╮╭┫╰━┳━┳━━┳━━╮╱╰╯┃┃┣┻━┫┃╭━━┳━━┳━┳━━┳╮╭╮
@@ -15,6 +15,7 @@ if config == False:
  req = ['pyrogram', 'tgcrypto', 'asyncio']
  for _ in req:
   os.system(f'pip3 install {_}')
+print(colorama.Fore.GREEN)
 from pyrogram import Client, filters, idle; import asyncio, requests; from datetime import datetime
 
 # Конфиг
@@ -60,13 +61,13 @@ def ping(self, message):
   ping_data.append(duration)
   ping_msg.append(msg)
  ping = sum(ping_data) / len(ping_data)
- message.edit(f"<b>Пинг:</b> <code>{str(ping)[0:4]}</code> <b>мс</b>")
+ message.edit(f"<b>Пинг:</b> {str(ping)[0:4]} мс</b>")
  for msg in ping_msg:
   msg.delete()
 
 @app.on_message(filters.command("type", prefixes=".") & filters.me)
 def type(self, message):
- text = message.text.split('.type', maxsplit=1)[1]
+ text = message.text.split('.type ', maxsplit=1)[1]
  if not text:
   message.edit('<b>Нету аргументов.\nПример:</b> <code>.type <текст></code>')
   return
@@ -76,7 +77,7 @@ def type(self, message):
   space += typing
   if typing not in [" ", "\n"]:
    message.edit(space+"|")
-   sleep(0.3)
+   time.sleep(0.3)
  message.edit(orig)
  
 @app.on_message(filters.command("help", prefixes=".") & filters.me)
@@ -142,7 +143,7 @@ def aw(self, message):
   return
  message.edit(f"""**Погода:**
      `Город: {r.text}`""", parse_mode='markdown')
- terminal('clear')
+ os.system('clear')
  print(colorama.Fore.MAGENTA+dethree+colorama.Fore.YELLOW+'\nСоздатель: @Dently\nКанал: @Dethree\n\n'+colorama.Fore.GREEN+'Dethree-Telegram успешно запущен.\nНапишите .help в Телеграме, чтобы продолжить.'+colorama.Fore.RED+'\n\nОшибки [логи]:')
  
 @app.on_message(filters.command('del', prefixes='.') & filters.me)
@@ -172,6 +173,9 @@ async def purge(self, message):
   
 @app.on_message(filters.command('spam', prefixes='.') & filters.me)
 async def spam(self, message):
+ if len(message.text) <= 6:
+  await message.edit('<b>Нету аргументов.\nПример:</b> <code>.spam <кол-во> <текст></code>')
+  return
  count = message.command[1]
  text = ' '.join(message.command[2:])
  count = int(count)
